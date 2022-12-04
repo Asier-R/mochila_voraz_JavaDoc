@@ -4,4 +4,4 @@
 ### https://asier-r.github.io/mochila_voraz_JavaDoc/
 
 
-![UNED Logo](https://asier-r.github.io/mochila_voraz_JavaDoc/LogoUNED.jpg) Format: ![Logo UNED](url) 
+![UNED Logo](/LogoUNED.jpg) Format: ![Logo UNED](url) 
