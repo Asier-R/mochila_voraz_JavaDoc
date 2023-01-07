@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="dc.created" content="2023-01-07">
-<meta name="description" content="declaration: package: mochilaVoraz, class: Monticulo">
+<meta name="description" content="declaration: package: pasteleria, class: Monticulo">
 <meta name="generator" content="javadoc/ClassWriterImpl">
 <link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../script-dir/jquery-ui.min.css" title="Style">
@@ -84,11 +84,11 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">mochilaVoraz</a></div>
+<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">pasteleria</a></div>
 <h1 title="Class Monticulo" class="title">Class Monticulo&lt;T extends <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;T&gt;&gt;</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">mochilaVoraz.Monticulo&lt;T&gt;</div>
+<div class="inheritance">pasteleria.Monticulo&lt;T&gt;</div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
@@ -98,14 +98,14 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Monticulo&lt;T extends <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;T&gt;&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Clase que representa la estructura de datos "Montículo" utilizada para resolver el problema de la mochila con objetos
- fraccionables.
- UNED PREDA 2022/2023 - PEC1 - Oracle OpenJDK version 19.</div>
+<div class="block">Clase que representa la estructura de datos "Montículo de máximos". En esta nueva se utiliza arraylist en lugar de
+ array.
+ UNED PREDA 2022/2023 - PEC2 - Oracle OpenJDK version 19.</div>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>1.0</dd>
 <dt>Version:</dt>
-<dd>1.0</dd>
+<dd>2.0</dd>
 <dt>Author:</dt>
 <dd>Asier Rodríguez López</dd>
 </dl>
@@ -121,15 +121,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>private final <a href="Monticulo.html" title="type parameter in Monticulo">T</a></code></div>
-<div class="col-second even-row-color"><code><a href="#clase" class="member-name-link">clase</a></code></div>
+<div class="col-first even-row-color"><code>private <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="#vector" class="member-name-link">vector</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Variable auxiliar utilizada para poder instanciar un array utilizando genéricos.</div>
-</div>
-<div class="col-first odd-row-color"><code>private <a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]</code></div>
-<div class="col-second odd-row-color"><code><a href="#vector" class="member-name-link">vector</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">Variable array que contendrá el montículo de tipo T.</div>
+<div class="block">Variable que contendrá el montículo de tipo T.</div>
 </div>
 </div>
 </section>
@@ -142,14 +137,13 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(T)" class="member-name-link">Monticulo</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&nbsp;clase)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Monticulo</a>()</code></div>
 <div class="col-last even-row-color">
-<div class="block">Si no se dispone de un array se inicializa la clase y el montículo vacío.</div>
+<div class="block">Si no se dispone de un ArrayList, se inicializa la clase y el montículo vacío.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(T,T%5B%5D)" class="member-name-link">Monticulo</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&nbsp;clase,
- <a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;vector)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.ArrayList)" class="member-name-link">Monticulo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;vector)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Transforma el array de entrada en un montículo.</div>
+<div class="block">Transforma el arraylist de entrada en un montículo.</div>
 </div>
 </div>
 </section>
@@ -166,69 +160,69 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#creaMonticuloLineal(T%5B%5D)" class="member-name-link">creaMonticuloLineal</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;vector)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#creaMonticuloLineal(java.util.ArrayList)" class="member-name-link">creaMonticuloLineal</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;vector)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Crea un montículo a partir de un vector.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#crearMonticuloVacio()" class="member-name-link">crearMonticuloVacio</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Crea un montículo vacío de tamaño 1 (mínimo posible).</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#crearMonticuloVacio(int)" class="member-name-link">crearMonticuloVacio</a><wbr>(int&nbsp;tamano)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Crea un montículo vacío de tamaño n > 1.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#elMonticuloEstaVacio(T%5B%5D)" class="member-name-link">elMonticuloEstaVacio</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#elMonticuloEstaVacio(java.util.ArrayList)" class="member-name-link">elMonticuloEstaVacio</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">El montículo está vacío si tiene un tamaño de 0 o no tiene elementos.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#flotar(T%5B%5D,int)" class="member-name-link">flotar</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#flotar(java.util.ArrayList,int)" class="member-name-link">flotar</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo,
  int&nbsp;elemento)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reubica el elemento 'i' del vector, en caso de que este sea mayor que el padre, hasta que esté correctamente
  situado en el montículo y se haya restablecido la propiedad de montículo.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMonticulo()" class="member-name-link">getMonticulo</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Devuelve el montículo creado en el constructor de un solo parámetro.</div>
+<div class="block">Devuelve el montículo creado en el constructor.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#heapSort(T%5B%5D)" class="member-name-link">heapSort</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;vector)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#heapSort(java.util.ArrayList)" class="member-name-link">heapSort</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;vector)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Recibe un vector y lo ordenada de mayor a menor.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hundir(T%5B%5D,int)" class="member-name-link">hundir</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hundir(java.util.ArrayList,int)" class="member-name-link">hundir</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo,
  int&nbsp;elemento)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reubica el elemento i (intercambia su valor por el del mayor de sus hijos) del vector en caso de que este sea
  menor que alguno de sus hijos.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insertar(T,T%5B%5D)" class="member-name-link">insertar</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&nbsp;elemento,
- <a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insertar(T,java.util.ArrayList)" class="member-name-link">insertar</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&nbsp;elemento,
+ <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Inserta un elemento en el montículo y lo flota hasta restaurar la propiedad de montículo.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#intercambiar(int,int,T%5B%5D)" class="member-name-link">intercambiar</a><wbr>(int&nbsp;a,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#intercambiar(int,int,java.util.ArrayList)" class="member-name-link">intercambiar</a><wbr>(int&nbsp;a,
  int&nbsp;b,
- <a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Intercambia de posición a dos elementos de un montículo.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Monticulo.html" title="type parameter in Monticulo">T</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mostrarCima(T%5B%5D)" class="member-name-link">mostrarCima</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mostrarCima(java.util.ArrayList)" class="member-name-link">mostrarCima</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Devuelve la cima del montículo sin modificarlo.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Monticulo.html" title="type parameter in Monticulo">T</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#obtenerCima(T%5B%5D)" class="member-name-link">obtenerCima</a><wbr>(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#obtenerCima(java.util.ArrayList)" class="member-name-link">obtenerCima</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Devuelve la cima del montículo, la elimina y recompone la propiedad de montículo.</div>
 </div>
@@ -250,17 +244,10 @@ loadScripts(document, 'script');</script>
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="clase">
-<h3>clase</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a> extends <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;</span>&nbsp;<span class="element-name">clase</span></div>
-<div class="block">Variable auxiliar utilizada para poder instanciar un array utilizando genéricos.</div>
-</section>
-</li>
-<li>
 <section class="detail" id="vector">
 <h3>vector</h3>
-<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a> extends <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;[]</span>&nbsp;<span class="element-name">vector</span></div>
-<div class="block">Variable array que contendrá el montículo de tipo T.</div>
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a> extends <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&gt;</span>&nbsp;<span class="element-name">vector</span></div>
+<div class="block">Variable que contendrá el montículo de tipo T.</div>
 </section>
 </li>
 </ul>
@@ -272,13 +259,11 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(T)">
-<h3 id="&lt;init&gt;(java.lang.Comparable)">Monticulo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Monticulo</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&nbsp;clase)</span></div>
-<div class="block">Si no se dispone de un array se inicializa la clase y el montículo vacío.</div>
+<section class="detail" id="&lt;init&gt;()">
+<h3>Monticulo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Monticulo</span>()</div>
+<div class="block">Si no se dispone de un ArrayList, se inicializa la clase y el montículo vacío.</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>clase</code> - instancia de la clase Comparable que se va a utilizar para crear el montículo.</dd>
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
@@ -289,22 +274,20 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(T,T[])">
-<h3 id="&lt;init&gt;(java.lang.Comparable,java.lang.Comparable[])">Monticulo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Monticulo</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&nbsp;clase,
- <a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;vector)</span></div>
-<div class="block">Transforma el array de entrada en un montículo.
- El tamaño máximo no puede ser menor al del array de entrada.</div>
+<section class="detail" id="&lt;init&gt;(java.util.ArrayList)">
+<h3>Monticulo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Monticulo</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;vector)</span></div>
+<div class="block">Transforma el arraylist de entrada en un montículo.
+ El tamaño máximo no puede ser menor al del ArrayList de entrada.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>clase</code> - instancia de la clase Comparable que se va a utilizar para crear el montículo.</dd>
 <dd><code>vector</code> - vector sobre el cual se va a crear el montículo.</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - si el vector de entrada tiene un tamaño menor a cero.</dd>
 <dt>See Also:</dt>
 <dd>
-<ul class="see-list">
-<li><a href="#creaMonticuloLineal(T%5B%5D)"><code>creaMonticuloLineal(T[])</code></a></li>
+<ul class="see-list-long">
+<li><a href="#creaMonticuloLineal(java.util.ArrayList)"><code>creaMonticuloLineal(java.util.ArrayList&lt;T&gt;)</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -321,8 +304,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getMonticulo()">
 <h3>getMonticulo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]</span>&nbsp;<span class="element-name">getMonticulo</span>()</div>
-<div class="block">Devuelve el montículo creado en el constructor de un solo parámetro.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;</span>&nbsp;<span class="element-name">getMonticulo</span>()</div>
+<div class="block">Devuelve el montículo creado en el constructor.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>montículo generado en el constructor.</dd>
@@ -332,7 +315,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="crearMonticuloVacio()">
 <h3>crearMonticuloVacio</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]</span>&nbsp;<span class="element-name">crearMonticuloVacio</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;</span>&nbsp;<span class="element-name">crearMonticuloVacio</span>()</div>
 <div class="block">Crea un montículo vacío de tamaño 1 (mínimo posible).
  Complejidad temporal lineal O(1). La información obtenida en internet sugiere que la complejidad temporal estaría
  en torno a O(n), puesto que la máquina virtual tiene que reservar memoria e introducir el valor null en cada
@@ -347,12 +330,12 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="crearMonticuloVacio(int)">
 <h3>crearMonticuloVacio</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]</span>&nbsp;<span class="element-name">crearMonticuloVacio</span><wbr><span class="parameters">(int&nbsp;tamano)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;</span>&nbsp;<span class="element-name">crearMonticuloVacio</span><wbr><span class="parameters">(int&nbsp;tamano)</span></div>
 <div class="block">Crea un montículo vacío de tamaño n > 1.
- Complejidad temporal lienal O(n). La información obtenida en internet sugiere que la complejidad temporal estaría
+ Complejidad temporal lineal O(n). La información obtenida en internet sugiere que la complejidad temporal estaría
  en torno a O(n), puesto que la máquina virtual tiene que reservar memoria e introducir el valor null en cada
  posición del array. Para simplificar el cálculo de la complejidad, y al tener un tamaño n, se asumirá que el
- coste es de la creación del montículo es lienal.</div>
+ coste es de la creación del montículo es lineal.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tamano</code> - tamaño del montículo a crear. Si no se indica tamaño, se creará de tamaño 1.</dd>
@@ -364,11 +347,11 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="elMonticuloEstaVacio(T[])">
-<h3 id="elMonticuloEstaVacio(java.lang.Comparable[])">elMonticuloEstaVacio</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">elMonticuloEstaVacio</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</span></div>
+<section class="detail" id="elMonticuloEstaVacio(java.util.ArrayList)">
+<h3>elMonticuloEstaVacio</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">elMonticuloEstaVacio</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</span></div>
 <div class="block">El montículo está vacío si tiene un tamaño de 0 o no tiene elementos.
- Complejidad temporal lineal O(n) en el caso peor.</div>
+ Complejidad temporal constante O(1).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>monticulo</code> - montículo que se inspeccionará para ver si está vacío.</dd>
@@ -378,16 +361,16 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="flotar(T[],int)">
-<h3 id="flotar(java.lang.Comparable[],int)">flotar</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">flotar</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo,
+<section class="detail" id="flotar(java.util.ArrayList,int)">
+<h3>flotar</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">flotar</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo,
  int&nbsp;elemento)</span></div>
 <div class="block">Reubica el elemento 'i' del vector, en caso de que este sea mayor que el padre, hasta que esté correctamente
  situado en el montículo y se haya restablecido la propiedad de montículo.
  Se utiliza para la inserción de un elemento nuevo en el montículo.
- Complejidad temporal lineal O(n/2). Cada iteración del bucle corresponde a un nivel del montículo y cada nivel
- tiene solo dos elementos. Ambos elementos se exploran en la misma iteración, por lo que el bucle será de tamaño
- n/2, donde 'n' es la cantidad de elementos en el montículo.</div>
+ Complejidad temporal logarítmico O(log(n)). Cada iteración del bucle corresponde a un nivel del montículo y cada
+ nivel tiene solo dos elementos. En cada iteración se compara el elemento del nivel de ese momento con su elemento
+ padre, por lo que el bucle, en el caso peor, será de tamaño log(n), donde 'n' es la cantidad de elementos en el montículo.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>monticulo</code> - montículo sobre el que se realizará la acción flotar.</dd>
@@ -395,16 +378,16 @@ loadScripts(document, 'script');</script>
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list-long">
-<li><a href="#intercambiar(int,int,T%5B%5D)"><code>intercambiar(int, int, T[])</code></a></li>
+<li><a href="#intercambiar(int,int,java.util.ArrayList)"><code>intercambiar(int, int, java.util.ArrayList&lt;T&gt;)</code></a></li>
 </ul>
 </dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="hundir(T[],int)">
-<h3 id="hundir(java.lang.Comparable[],int)">hundir</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">hundir</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo,
+<section class="detail" id="hundir(java.util.ArrayList,int)">
+<h3>hundir</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">hundir</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo,
  int&nbsp;elemento)</span></div>
 <div class="block">Reubica el elemento i (intercambia su valor por el del mayor de sus hijos) del vector en caso de que este sea
  menor que alguno de sus hijos.
@@ -419,18 +402,18 @@ loadScripts(document, 'script');</script>
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list-long">
-<li><a href="#intercambiar(int,int,T%5B%5D)"><code>intercambiar(int, int, T[])</code></a></li>
+<li><a href="#intercambiar(int,int,java.util.ArrayList)"><code>intercambiar(int, int, java.util.ArrayList&lt;T&gt;)</code></a></li>
 </ul>
 </dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="intercambiar(int,int,T[])">
-<h3 id="intercambiar(int,int,java.lang.Comparable[])">intercambiar</h3>
+<section class="detail" id="intercambiar(int,int,java.util.ArrayList)">
+<h3>intercambiar</h3>
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">intercambiar</span><wbr><span class="parameters">(int&nbsp;a,
  int&nbsp;b,
- <a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</span></div>
 <div class="block">Intercambia de posición a dos elementos de un montículo.
  Complejidad temporal constante O(3). O(3) = O(1)+O(1)+O(1) Se realizan tres acciones de complejidad constante.</div>
 <dl class="notes">
@@ -442,35 +425,34 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="insertar(T,T[])">
-<h3 id="insertar(java.lang.Comparable,java.lang.Comparable[])">insertar</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]</span>&nbsp;<span class="element-name">insertar</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&nbsp;elemento,
- <a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</span></div>
+<section class="detail" id="insertar(T,java.util.ArrayList)">
+<h3 id="insertar(java.lang.Comparable,java.util.ArrayList)">insertar</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">insertar</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&nbsp;elemento,
+ <a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</span></div>
 <div class="block">Inserta un elemento en el montículo y lo flota hasta restaurar la propiedad de montículo.
- Complejidad temporal lineal O(n). No se añaden espacios (nulos) adicionales al montículo para simplificar el
- algoritmo de flotar y hundir. Aunque esto implica que siempre que se inserta un elemento se hace en un tiempo O(n).</div>
+ Aunque un ArrayList dispone de una capacidad adicional superior a la indicada en su creación y, por lo tanto, cada
+ vez que se inserta un item no es necesario crear un nuevo ArrayList de mayor capacidad, con el fin de simplificar
+ cálculos, se asume una complejidad temporal lineal O(n).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>elemento</code> - elemento a insertar en montículo.</dd>
 <dd><code>monticulo</code> - montículo sobre el que se realiza la acción insertar.</dd>
-<dt>Returns:</dt>
-<dd>montículo de tamaño n+1 con el elemento nuevo.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - si el elemento a insertar es nulo.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - si el elemento a insertar es nulo o el montículo es nulo.</dd>
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list-long">
 <li><a href="#crearMonticuloVacio(int)"><code>crearMonticuloVacio(int)</code></a></li>
-<li><a href="#flotar(T%5B%5D,int)"><code>flotar(T[], int)</code></a></li>
+<li><a href="#flotar(java.util.ArrayList,int)"><code>flotar(java.util.ArrayList&lt;T&gt;, int)</code></a></li>
 </ul>
 </dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="mostrarCima(T[])">
-<h3 id="mostrarCima(java.lang.Comparable[])">mostrarCima</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a></span>&nbsp;<span class="element-name">mostrarCima</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</span></div>
+<section class="detail" id="mostrarCima(java.util.ArrayList)">
+<h3>mostrarCima</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a></span>&nbsp;<span class="element-name">mostrarCima</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</span></div>
 <div class="block">Devuelve la cima del montículo sin modificarlo.
  Complejidad temporal constante O(1).</div>
 <dl class="notes">
@@ -482,9 +464,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="obtenerCima(T[])">
-<h3 id="obtenerCima(java.lang.Comparable[])">obtenerCima</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a></span>&nbsp;<span class="element-name">obtenerCima</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;monticulo)</span></div>
+<section class="detail" id="obtenerCima(java.util.ArrayList)">
+<h3>obtenerCima</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Monticulo.html" title="type parameter in Monticulo">T</a></span>&nbsp;<span class="element-name">obtenerCima</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;monticulo)</span></div>
 <div class="block">Devuelve la cima del montículo, la elimina y recompone la propiedad de montículo.
  Complejidad temporal O(log(n)).</div>
 <dl class="notes">
@@ -495,17 +477,17 @@ loadScripts(document, 'script');</script>
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list-long">
-<li><a href="#mostrarCima(T%5B%5D)"><code>mostrarCima(T[])</code></a></li>
-<li><a href="#hundir(T%5B%5D,int)"><code>hundir(T[], int)</code></a></li>
+<li><a href="#mostrarCima(java.util.ArrayList)"><code>mostrarCima(java.util.ArrayList&lt;T&gt;)</code></a></li>
+<li><a href="#hundir(java.util.ArrayList,int)"><code>hundir(java.util.ArrayList&lt;T&gt;, int)</code></a></li>
 </ul>
 </dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="creaMonticuloLineal(T[])">
-<h3 id="creaMonticuloLineal(java.lang.Comparable[])">creaMonticuloLineal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">creaMonticuloLineal</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;vector)</span></div>
+<section class="detail" id="creaMonticuloLineal(java.util.ArrayList)">
+<h3>creaMonticuloLineal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">creaMonticuloLineal</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;vector)</span></div>
 <div class="block">Crea un montículo a partir de un vector.
  Complejidad temporal O(n).</div>
 <dl class="notes">
@@ -514,16 +496,16 @@ loadScripts(document, 'script');</script>
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list-long">
-<li><a href="#hundir(T%5B%5D,int)"><code>hundir(T[], int)</code></a></li>
+<li><a href="#hundir(java.util.ArrayList,int)"><code>hundir(java.util.ArrayList&lt;T&gt;, int)</code></a></li>
 </ul>
 </dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="heapSort(T[])">
-<h3 id="heapSort(java.lang.Comparable[])">heapSort</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">heapSort</span><wbr><span class="parameters">(<a href="Monticulo.html" title="type parameter in Monticulo">T</a>[]&nbsp;vector)</span></div>
+<section class="detail" id="heapSort(java.util.ArrayList)">
+<h3>heapSort</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">heapSort</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Monticulo.html" title="type parameter in Monticulo">T</a>&gt;&nbsp;vector)</span></div>
 <div class="block">Recibe un vector y lo ordenada de mayor a menor.
  Complejidad temporal O(n*log(n)).</div>
 <dl class="notes">
@@ -533,9 +515,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - si el vector de entrada es de tamaño menor a uno.</dd>
 <dt>See Also:</dt>
 <dd>
-<ul class="see-list">
-<li><a href="#creaMonticuloLineal(T%5B%5D)"><code>creaMonticuloLineal(T[])</code></a></li>
-<li><a href="#obtenerCima(T%5B%5D)"><code>obtenerCima(T[])</code></a></li>
+<ul class="see-list-long">
+<li><a href="#creaMonticuloLineal(java.util.ArrayList)"><code>creaMonticuloLineal(java.util.ArrayList&lt;T&gt;)</code></a></li>
+<li><a href="#obtenerCima(java.util.ArrayList)"><code>obtenerCima(java.util.ArrayList&lt;T&gt;)</code></a></li>
 </ul>
 </dd>
 </dl>
